@@ -21,14 +21,14 @@ public class LengthOfLongestSubstring {
         Set<Character> set = new HashSet<>();
 
         while(end_win < s.length()){
-            while(set.contains(s.charAt(end_win))){
+            if(!set.contains(s.charAt(end_win))){
+                set.add(s.charAt(end_win));
+                max_len = Math.max(max_len,set.size());
+                end_win++;
+            }else{
                 set.remove(s.charAt(start_win));
                 start_win++;
             }
-
-            set.add(s.charAt(end_win));
-            max_len = Math.max(max_len, set.size());
-            end_win++;
         }
 
         return max_len;
