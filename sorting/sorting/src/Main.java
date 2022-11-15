@@ -16,7 +16,7 @@ public class Main {
         System.out.println(Arrays.toString(arr));
 
         System.out.println("***** After sorting ******");
-        InsertionSort.sort(arr);
+        BubbleSort.sort(arr);
         System.out.println(Arrays.toString(arr));
     }
 }
